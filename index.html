@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype>
 <html>
   <head>
@@ -7,4 +8,178 @@
   <body>
     <h1>Hello all.</h1>
   </body>
+=======
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="ie6" xmlns="http://www.w3.org/1999/xhtml"> <![endif]-->
+<!--[if IE 7]>         <html class="ie7" xmlns="http://www.w3.org/1999/xhtml"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8" xmlns="http://www.w3.org/1999/xhtml"> <![endif]-->
+<!--[if gt IE 8]><!--> <html xmlns="http://www.w3.org/1999/xhtml">         <!--<![endif]-->
+
+<head>
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Language" content="en-gb" />
+    <link type="text/css" media="screen" rel="stylesheet" href="style/style.css" />
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<!--script src="javascript/jquery-1.10.1.min.js"></script-->
+	<script src="javascript/jquery.colorbox-min.js"></script>
+	<link rel="stylesheet" href="style/colorbox.css" />
+	<script src="javascript/jflickrfeed.min.js"></script>
+</head>
+<body>
+
+<div id="container">
+<div id="wrapper">
+
+	<div id="header" class="cf">
+		<div class="sidebar">
+			<a href="#" class="logo-blink ir link-gallery">Jenni Clowes Illustrations</a>
+		</div>
+		<div class="content">
+			<h1 class="logo-text ir link-gallery">Jenni Clowes Illustrations</h1>
+		</div>
+	</div>
+
+
+
+	<div id="content-main" class="cf">
+	
+		<div class="sidebar">
+			<ul id="nav-side">
+				<li class="tumblr"><a href="http://jenniclowesillustrations.tumblr.com">My Tumblr galleries</a></li>
+				<li class="shop"><a href="http://www.etsy.com/uk/shop/JCaccidental?ref=si_shop">Buy my stuff!</a></li>
+				<li class="commissions"><a class="link-commissions" href="#">My commissions!</a></li>
+				<li class="facebook"><a href="https://www.facebook.com/pages/Jenni-Clowes-Illustrations/257323639646">My Facebook page</a></li>
+				<li class="info"><a class="link-about" href="#">About meee!</a></li>
+			</ul>
+		</div>
+		
+		
+		<div id="tab-gallery" class="content">
+			<!--h2>A gallery.</h2-->
+			<ul id="cbox" class="gallery cf"></ul>
+		</div>
+		
+		<div id="tab-about" class="content">
+			<p>Graduate of Graphic design and Illustration at De Montfort University, Leicester. Currently based in Leeds.</p>
+			<p>Available for commissions such as; Concept, Design and Print of Invitations. Custom Portraits and Greetings cards. Anything you need (almost!)</p>
+			<p>Also happy to discuss collaborations; Big or Small.</p>
+			<p>You can get in touch here:</p>
+			<p>07814 984937</p>
+			<p><a href="mailto:jenni.clowes@gmail.com">jenni.clowes@gmail.com</a></p>
+			<img class="about-img" src="images/about-me.png">
+		</div>
+		
+		<div id="tab-commissions" class="content">
+			<ul id="cbox-commissions" class="gallery cf"></ul>
+		</div>
+		
+	</div>
+
+
+	<div id="footer">
+	</div>
+
+</div>
+</div>
+
+
+
+<script>
+$(document).ready(function(){
+
+	$('#cbox').jflickrfeed({
+		limit: 20,
+		qstrings:{
+			set: '72157634328408060',
+			nsid: '50198685@N07'
+		},
+		itemTemplate: '<li>'+
+						'<a rel="colorbox" href="{{image}}" title="{{title}}">' +
+							'<img src="{{image_s}}" alt="{{title}}" />' +
+						'</a>' +
+					  '</li>'
+	}, function(data) {
+		$('#cbox a').colorbox();
+	});
+	
+	$('#cbox').jflickrfeed({
+		limit: 1,
+		qstrings:{
+			set: '72157634323367587',
+			nsid: '50198685@N07'
+		},
+		itemTemplate: '<li>'+
+						'<a rel="colorbox" href="{{image}}" title="{{title}}">' +
+							'<img src="{{image_s}}" alt="{{title}}" />' +
+						'</a>' +
+					  '</li>'
+	}, function(data) {
+		$('#cbox a').colorbox();
+	});
+	
+	$('#cbox-commissions').jflickrfeed({
+		limit: 20,
+		qstrings:{
+			set: '72157634991599884',
+			nsid: '50198685@N07'
+		},
+		itemTemplate: '<li>'+
+						'<a rel="colorbox" href="{{image}}" title="{{title}}">' +
+							'<img src="{{image_s}}" alt="{{title}}" />' +
+						'</a>' +
+					  '</li>'
+	}, function(data) {
+		$('#cbox-commissions a').colorbox();
+	});
+		
+		
+	$('.link-gallery').click(function(){
+		$('#tab-about').hide();
+		$('#tab-gallery').show();
+		$('#tab-commissions').hide();
+		return false;
+	})
+	$('.link-about').click(function(){
+		$('#tab-about').show();
+		$('#tab-gallery').hide();
+		$('#tab-commissions').hide();
+		return false;
+	})
+	$('.link-commissions').click(function(){
+		$('#tab-about').hide();
+		$('#tab-gallery').hide();
+		$('#tab-commissions').show();
+		return false;
+	})
+		
+});
+
+
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-16562749-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+
+</script>
+		
+</body>
+>>>>>>> gh-pages
 </html>
+
+
+
+
+
+

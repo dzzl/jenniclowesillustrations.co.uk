@@ -1,0 +1,174 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a { text-decoration:none; outline:none; }
+
+
+
+
+
+
+/* clearfix: http://perishablepress.com/new-clearfix-hack/ */
+.cf:after {
+    visibility:hidden;
+    display:block;
+    font-size:0;
+    content:'';
+    clear:both;
+    height:0;
+}
+.ie6 .cf { zoom:1; } /* IE6 */
+.ie7 .cf { zoom:1; } /* IE7 */
+/* /clearfix */
+
+
+
+/* text replacement: http://nicolasgallagher.com/another-css-image-replacement-technique/ */
+.ir {
+    font:0/0 a;
+    text-shadow:none;
+    color:transparent;
+}
+.ie6 .ir { text-indent:-99999px; }
+/* /text replacement */
+
+
+
+
+
+
+body, input, select, textarea { color:#777; }
+
+
+/* containers */
+#container { margin:0 auto; display:table; }
+/* /containers */
+
+#wrapper { max-width:1140px; display:table-cell; vertical-align:middle; }
+
+html, body, #container, #wrapper { height:100%; }
+
+
+/* header */
+#header { padding-top:10px; }
+#header  .logo-blink { background:url(../images/logo-blink.png) top left no-repeat; height:151px; width:150px; display:block; margin:0 auto; }
+#header  .logo-blink:hover  { background-position:bottom left; }
+#header  .logo-text { margin:40px 0 0 30px; background:url(../images/logo-jenni.png) top left no-repeat; height:55px; width:180px; display:block; }
+#header  .logo-text:hover { -webkit-transform:rotate(3deg); transform:rotate(3deg) }
+/* /header */
+
+
+.sidebar { width:195px; float:left; margin-right:35px; }
+#nav-side { margin-top:75px; }
+#nav-side li { height:40px; overflow:hidden; margin-bottom: 15px; }
+#nav-side li a { position:relative;  background:url(../images/sprite-nav.png) no-repeat; width:108px; height:160px; text-indent:-9999em; display:block; margin:0 auto; }
+#nav-side li.tumblr a			{ background-position: -324px 0; }
+#nav-side li.shop a			{ background-position: -216px 0; }
+#nav-side li.facebook a		{ background-position: 0 0; }
+#nav-side li.info a			{ background-position: -108px 0; }
+#nav-side li.commissions a		{ background-position: -432px 0; }
+
+#nav-side li:hover a { animation:shiftbg 0.75s steps(1) infinite; -webkit-animation:shiftbg 0.75s steps(1) infinite; }
+
+.social-wrap { text-align:center; }
+.social-wrap a { display:inline-block; }
+.social-wrap a + a { margin-left:5px; }
+
+
+/* footer */
+#footer {}
+/* /footer */
+
+
+
+.content { overflow:hidden; }
+
+#tab-about { display:none; }
+#tab-commissions { display:none; }
+#tab-shop { display:none; }
+
+#content-main {  }
+#content-main .content {  }
+.content-inner { height:500px; overflow:auto; }
+
+p { margin:1.5em 0; font-family: tahoma; font-size: 13px; }
+p a { color:#E09FA7 }
+
+.gallery { }
+.gallery  li{ float:left; margin:0 0 30px 30px; position:relative; } /* box-shadow:3px 3px 4px #ccc; */
+.gallery  li a { }
+.gallery  li:hover a:after { content:''; position:absolute; top:0; left:0; right:0; bottom:0; background:#000; opacity:0.1; }
+.gallery  li a img{ vertical-align:top; height:100px; width:100px; }
+
+.about-img { display:block; margin:20px auto 0; }
+
+
+
+
+
+
+
+
+@keyframes shiftbg
+{
+	25% { top:-40px; }
+	50% { top:-80px; }
+	75% { top:-120px; }
+	100% { top:0px; }
+}
+
+@-webkit-keyframes shiftbg /* Safari and Chrome */
+{
+	25% { top:-40px; }
+	50% { top:-80px; }
+	75% { top:-120px; }
+	100% { top:0px; }
+}
+	
+	
+	
