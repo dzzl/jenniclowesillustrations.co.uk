@@ -181,17 +181,44 @@ header {
 
 
 body {
-	display:flex;
-	flex-direction:column;
-	min-height:100vh;
 	.clearfix();
+	
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+
+	min-height:100vh;
 	main {
 		padding-left:20px;
 		padding-right:20px;
+		
+		-webkit-box-flex:1 1 auto;
+		-webkit-flex:1 1 auto;
+		-ms-flex:1 1 auto;
 		flex:1 1 auto;
-		display:flex;
-		flex-direction:column;
-		align-items:center;
+		
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		
+		-webkit-flex-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		align-items: center;
 	}
 }
 
