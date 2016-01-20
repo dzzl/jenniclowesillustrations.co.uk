@@ -1937,18 +1937,6 @@ p + p {
 .fa-medium:before {
   content: "\f23a";
 }
-@font-face {
-  font-family: 'Muli';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Muli'), url(http://fonts.gstatic.com/s/muli/v7/BfQP1MR3mJNaumtWa4Tizg.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Raleway'), url(http://fonts.gstatic.com/s/raleway/v9/bIcY3_3JNqUVRAQQRNVteQ.ttf) format('truetype');
-}
 html {
   overflow-y: scroll;
   font-family: 'Raleway', Arial;
@@ -2037,7 +2025,14 @@ header .mob-detect {
   }
 }
 body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   min-height: 100vh;
 }
@@ -2049,9 +2044,22 @@ body:after {
 body main {
   padding-left: 20px;
   padding-right: 20px;
+  -webkit-box-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
   align-items: center;
 }
 .tab-content {
@@ -2253,5 +2261,9 @@ footer .social-wrap .social-icon.instagram:before {
   content: '\f16d';
 }
 footer .copyright {
-  font-size: 8px;
+  font-size: 11px;
+  line-height: 1;
+}
+footer .copyright p + p {
+  margin-top: 5px;
 }
