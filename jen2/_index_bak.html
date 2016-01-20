@@ -38,6 +38,7 @@
 			<a class="nav-link full" href="https://www.etsy.com/uk/shop/JCaccidental">shop</a>
 			<span class="nav-link iframe" data-target="shop">shop</span>
 			<span class="nav-link" data-target="commissions">commissions</span>
+			<span class="nav-link" data-target="testimonials">testimonials</span>
 		</nav>
 		
 	</div>
@@ -97,7 +98,63 @@
 		
 		
 		<div class="tab-content" data-name="commissions">
-			<div id="cbox-commissions" class="commissions-wrap">
+			<ul id="cbox-commissions" class="gallery"></ul>
+		</div>
+		
+		
+		
+		<div class="tab-content" data-name="testimonials">
+			<div class="testimonial-wrap">
+				<div class="testimonial-each">
+					<blockquote>
+						<p>After looking for a unique personal gift for my husband on Etsy I stumbled across Jenni's work, I thought the illustrations were beautiful and a fantastic 'non cheesy' way to get a portrait done. </p>
+						<p>I contacted her and sent 3 images of us together. The drawing came back within a couple of days and it was perfect! </p>
+						<p>My husband loved it & it's in pride of place in our lounge. Pretty much everyone who's come round has commented on it! It was a pleasure to work with Jenni.</p>
+					</blockquote>
+					<a rel="colorbox" href="http://farm9.staticflickr.com/8707/16935327219_dabf3e8bb8.jpg">IMAGE</a>
+					<p class="client">Helen Tovey</p>
+				</div>
+					
+				<div class="testimonial-each">	
+					<blockquote>
+						<p>Got my drawing I absolutely love it! Jenni you were a pleasure to work with and took any tweeks I wished to make, on board to make it perfect! All my friends & family love it and now all want one too. Can't wait to give it to my husband, thank you x</p>
+					</blockquote>
+					<a rel="colorbox" href="http://farm8.staticflickr.com/7595/17095612796_4ac5e450cc.jpg">IMAGE</a>
+					<p class="client">Katie Barnes</p>
+				</div>
+					
+				<div class="testimonial-each">	
+					<blockquote>
+						<p>I got in touch with Jenni to commission a family portrait as a mothers day gift earlier this year. I’ve always loved Jenni’s unique, funny & quirky style so I really hoped it would lend itself to a family portrait; I thought there’d be something a great deal more valuable about having a personal, stylised illustration of us all rather than yet another photograph - I was TOTALLY right! </p>
+						<p>I sent her a few reference images of us and she got to work. A few days later Jenni sent me a proof of what she’d done. I nearly cried. I was absolutely blown away by what she’d produced. It was everything i’d hoped for and much much more, her attention to detail made the piece really stand out for me. When I gave it to my wife, her eyes lit up, she cried and we didn’t stop staring and talking about it for a full 2 hours after opening it.  Even then the discussions went on for days afterwards.</p>
+						<p>To say we loved it would be an understatement. It went straight on the wall in our lounge and its always the first thing everyone talks about when they come in. </p>
+						<p>I’m already contemplating having more children just so I can commission Jenni again; and also trying to think of birthday and christmas present ideas to involve her beautiful work. We treasure it!</p>
+					</blockquote>
+					<a rel="colorbox" href="http://farm8.staticflickr.com/7667/16935445239_d07dbda107.jpg">IMAGE</a>
+					<p class="client">Richard Kiely</p>
+				</div>
+					
+				<div class="testimonial-each">
+					<blockquote>
+						<p>Many, many thanks for the beautiful artwork you did for my sister in law's 50th birthday. She absolutely loved it! A 50th is quite a milestone and this was the perfect gift, personal and fun!</p>
+						<p>Also, it was a pleasure to do business with you. Your replies were prompt and friendly and the artwork was well packed and arrived in excellent condition. Can't thank you enough.</p>
+						<p>I'm sure I'll be back in touch very soon. We have a family wedding on the horizon!</p>
+					</blockquote>
+					<a rel="colorbox" href="http://farm8.staticflickr.com/7629/16914209507_a80fe24105.jpg">IMAGE</a>
+					<p class="client">Linda Tovey</p>
+				</div>
+					
+				<div class="testimonial-each">
+					<blockquote>
+						<p>I asked Jenni to do a portrait for my best friend for her wedding as I wanted something a little more personal than the run of the mill things around. I sent over some photos of the couple prior to the big day and also of the brides dress and told her a little of their interests, likes and dislikes.</p>
+						<p>In a very short space of time Jenni emailed me a copy for my approval.</p>
+						<p>The portrait was just lovely and despite her never having met them Jenni captured the likeness and characters of my friend and her prospective hubby, it was quirky and has a real lightness of touch that made it perfect for the two of them.  Jenni posted it off and it arrived well packed, drawn on good quality art paper and looked gorgeous when it was mounted and framed.</p>
+						<p>The Happy Couple were thrilled to bits and proceeded to show it around all the tables at their reception, it now has pride of place in their lounge as a wonderful reminder of a perfect day.</p>
+						<p>I wouldn't hesitate to ask Jenni to do work for me again for any occasion, she is very talented, professional and easy to talk to, especially if you want something a little different for your friends and family or even yourself. ~ Thanks again Jenni.  </p>
+					</blockquote>
+					<a rel="colorbox" href="http://farm4.staticflickr.com/3879/14638851451_bce5f0dcfb.jpg">IMAGE</a>
+					<p class="client">Lea Cook</p>
+				</div>
 			</div>
 		</div>
 		
@@ -166,13 +223,11 @@ $(document).ready(function(){
 			set: '72157634991599884',
 			nsid: '50198685@N07'
 		},
-		itemTemplate: '<div class="commissions-each">'+
-							'<a class="image" rel="colorbox" href="{{image}}"><img src="{{image_m}}" alt="{{title}} commission" /></a>'+
-							'<div class="desc">'+
-								'<blockquote>{{description}}</blockquote>'+
-								'<p class="client">{{title}}</p>'+
-							'</div>'+
-						'</div>'
+		itemTemplate: '<li>'+
+						'<a rel="colorbox" href="{{image}}" title="{{title}}">' +
+							'<img src="{{image_m}}" alt="{{title}}" />' +
+						'</a>' +
+					  '</li>'
 	}, function(data) {
 		$('#cbox-commissions a').colorbox();
 	});

@@ -133,6 +133,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+p + p {
+  margin-top: 1em;
+}
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -1947,6 +1950,7 @@ table {
   src: local('Raleway'), url(http://fonts.gstatic.com/s/raleway/v9/bIcY3_3JNqUVRAQQRNVteQ.ttf) format('truetype');
 }
 html {
+  overflow-y: scroll;
   font-family: 'Raleway', Arial;
   font-size: 82.5%;
 }
@@ -1955,7 +1959,7 @@ body {
   font-size: 14px;
 }
 .container {
-  max-width: 992px;
+  max-width: 800px;
   margin: auto;
 }
 header {
@@ -1965,6 +1969,11 @@ header {
 header .logo-wrap {
   display: inline-block;
   margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+header .logo-wrap:hover {
+  transform: scale(1.025);
 }
 header .logo-wrap .logo-main {
   width: 280px;
@@ -1979,35 +1988,34 @@ header .nav-main {
   display: block;
   margin-left: -20px;
 }
-header .nav-main > li {
+header .nav-main .nav-link {
+  cursor: pointer;
   display: inline-block;
   margin-left: 20px;
-}
-header .nav-main > li a {
   font-size: 1.6rem;
   color: #66C3B0;
   text-decoration: none;
   transition: all 0.15s;
-  display: block;
   line-height: 1;
 }
-header .nav-main > li a:hover {
+header .nav-main .nav-link:hover,
+header .nav-main .nav-link.active {
   color: #7FDBC9;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
-header .nav-main > li.full {
+header .nav-main .nav-link.full {
   display: inline-block;
 }
-@media (min-width: 800px) {
-  header .nav-main > li.full {
+@media (min-width: 768px) {
+  header .nav-main .nav-link.full {
     display: none;
   }
 }
-header .nav-main > li.iframe {
+header .nav-main .nav-link.iframe {
   display: none;
 }
-@media (min-width: 800px) {
-  header .nav-main > li.iframe {
+@media (min-width: 768px) {
+  header .nav-main .nav-link.iframe {
     display: inline-block;
   }
 }
@@ -2016,49 +2024,65 @@ header .nav-main > li.iframe {
     position: static;
   }
 }
-main {
-  padding-left: 20px;
-  padding-right: 20px;
-  min-height: calc(100vh - 187px - 117px);
+header .mob-detect {
+  position: absolute;
+  z-index: -1;
+  height: 0;
+  width: 0;
+  overflow: hidden;
 }
-main:after {
+@media (min-width: 768px) {
+  header .mob-detect {
+    display: none;
+  }
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body:after {
   content: '';
   display: table;
   clear: both;
 }
-@media (min-width: 768px) {
-  main {
-    min-height: calc(100vh - 226px - 117px);
-  }
+body main {
+  padding-left: 20px;
+  padding-right: 20px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .tab-content {
-  display: none;
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  opacity: 0;
+  transition: 0.5s;
 }
-.tab-contact {
-  text-align: center;
-}
-.tab-shop {
-  text-align: center;
-}
-.atarg {
-  position: absolute;
-  top: 0;
-}
-.atarg#home:target + .tab-content,
-.atarg#about:target + .tab-content,
-.atarg#contact:target + .tab-content,
-.atarg#shop:target + .tab-content,
-.atarg#commissions:target + .tab-content,
-.atarg#testimonials:target + .tab-content {
+.tab-content.active {
+  height: auto;
+  opacity: 1;
   display: block;
+}
+.tab-content[data-name='contact'] {
+  text-align: center;
+}
+.tab-content[data-name='shop'] {
+  text-align: center;
 }
 .gallery {
   text-align: center;
+  margin-bottom: -20px;
 }
 .gallery:after {
   content: '';
   display: table;
   clear: both;
+}
+.gallery li {
+  margin-bottom: 20px;
 }
 @media (min-width: 500px) {
   .gallery li {
@@ -2066,36 +2090,51 @@ main:after {
     width: 50%;
   }
 }
+@media (min-width: 500px) and (max-width: 749px) {
+  .gallery li:nth-child(2n+1) {
+    clear: left;
+  }
+}
 @media (min-width: 750px) {
   .gallery li {
     width: 33.33334%;
+  }
+}
+@media (min-width: 750px) and (max-width: 899px) {
+  .gallery li:nth-child(3n+1) {
+    clear: left;
   }
 }
 @media (min-width: 900px) {
   .gallery li {
     width: 25%;
   }
+  .gallery li:nth-child(4n+1) {
+    clear: left;
+  }
 }
 .gallery li a {
   text-align: center;
 }
+.gallery li img {
+  max-width: 100%;
+}
 iframe {
   width: 100%;
   max-width: 755px;
-  height: 625px;
+  height: 780px;
 }
-.testimonial-wrap .testimonial-each {
+.commissions-wrap .commissions-each {
   line-height: 1.6;
   font-size: 14px;
-  margin-top: 20px;
 }
-@media (min-width: 768px) {
-  .testimonial-wrap .testimonial-each {
-    margin-top: 40px;
-  }
+.commissions-wrap .commissions-each:after {
+  content: '';
+  display: table;
+  clear: both;
 }
-.testimonial-wrap .testimonial-each blockquote p:before,
-.testimonial-wrap .testimonial-each blockquote p:after {
+.commissions-wrap .commissions-each .desc blockquote p:before,
+.commissions-wrap .commissions-each .desc blockquote p:after {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -2105,19 +2144,46 @@ iframe {
   transform: translate(0, 0);
   font-size: 18px;
 }
-.testimonial-wrap .testimonial-each blockquote p:first-child:before {
+.commissions-wrap .commissions-each .desc blockquote p:first-child:before {
   content: "\f10d";
   margin-right: 5px;
 }
-.testimonial-wrap .testimonial-each blockquote p:last-child:after {
+.commissions-wrap .commissions-each .desc blockquote p:last-child:after {
   content: " \f10e";
   margin-left: 5px;
 }
-.testimonial-wrap .testimonial-each .client {
+.commissions-wrap .commissions-each .desc .client {
   font-weight: bold;
 }
-.tab-about .about-img {
-  margin-top: 40px;
+.commissions-wrap .commissions-each .image {
+  margin: 0;
+}
+.commissions-wrap .commissions-each .image img {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+}
+@media (min-width: 500px) {
+  .commissions-wrap .commissions-each .image {
+    float: right;
+    margin-left: 20px;
+  }
+}
+.commissions-wrap .commissions-each + .commissions-each {
+  margin-top: 20px;
+}
+.image {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 100%;
+  cursor: all-scroll;
+}
+@media (min-width: 768px) {
+  .about-text .about-image {
+    margin-bottom: 0;
+    margin-right: 20px;
+    float: left;
+  }
 }
 footer {
   padding: 20px;
