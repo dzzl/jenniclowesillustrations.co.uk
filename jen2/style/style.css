@@ -2178,7 +2178,8 @@ iframe {
   }
 }
 .commissions-wrap .commissions-each + .commissions-each {
-  margin-top: 20px;
+  margin-top: 40px;
+  padding-top: 40px;
 }
 .image {
   display: block;
