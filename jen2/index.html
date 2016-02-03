@@ -67,9 +67,10 @@
 		<div class="tab-content" data-name="about">
 			<div class="about-text">
 				<div class="about-image"><img class="image" src="images/bombay-sapphire.png"></div>
-				<p>When she's not making lists, coming up with unusual word combinations, or looking at trees; Jenni's great love is hand drawn illustration. Coincidentally, Illustration twins well with listening to the radio and drinking coffee.</p>
-				<p>While at work on personal pieces in her studio, she grows fond of her whimsical characters for their personalities and imperfections. As they grow on the page of her sketch book, she can complete them in the way that they have prescribed.</p>
-				<p>Get in touch if you'd like to work with Jenni on something collaborative or if you have a commission in mind</p>
+				<p>Jenni Clowes is a graduate of Graphic Design and Illustration with a BA (Hons) at De Montfort University, Leicester.</p>
+				<p>Since her degree, Jenni has developed her whimsical and charming illustrative style on a range of personal projects. To add to her portfolio, clients have approached Jenni for commissions such as; family portraits, logo designs, wedding stationary and editorial work.</p>
+				<p>When She's not drawing, Jenni's hobbies include; coffee (yes that is a hobby) making her own natural cosmetics, yoga, cooking and has recently begun exploring reflexology and aromatherapy.</p>
+				<p>Get in touch if you'd like to work with Jenni on something collaborative or if you have a commission in mind.</p>
 			</div>
 		</div>
 		
@@ -163,7 +164,7 @@ $(document).ready(function(){
 			nsid: '50198685@N07'
 		},
 		itemTemplate: '<div class="commissions-each">'+
-							'<a class="image" rel="colorbox" href="{{image}}"><img src="{{image_m}}" alt="{{title}} commission" /></a>'+
+							'<a class="image" rel="colorbox" href="{{image}}"><img src="{{image_m}}" alt="{{title}}" /></a>'+
 							'<div class="desc">'+
 								'<blockquote>{{description}}</blockquote>'+
 								'<p class="client">{{title}}</p>'+
@@ -182,6 +183,22 @@ $(document).ready(function(){
 	//$("iframe").contents().find("#listing-container").css('width','auto');
 	
 	
+	var getHash = window.location.hash;
+	if(getHash) {
+	
+		getHash = window.location.hash.substring(1);
+
+		$('[data-target].active').removeClass('active');
+		$('[data-target=' + getHash + ']').addClass('active');
+		
+		$('[data-name].active').removeClass('active');
+		$('[data-name=' + getHash + ']').addClass('active');
+	
+	} else {
+
+		//do nothing
+	
+	}
 	
 	//tabs
 	$('[data-target]').click(function(){
@@ -194,11 +211,13 @@ $(document).ready(function(){
 		
 		$('[data-name].active').removeClass('active');
 		$('[data-name=' + target + ']').addClass('active');
+		
+		window.location = ('#' + target);
+		
 	});
 	
 		
 });
-
 
 
 //do something 500ms after a page resize:
