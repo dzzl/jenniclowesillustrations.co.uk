@@ -302,6 +302,10 @@ iframe {
 	width:100%;
 	max-width: 755px;
 	height: 780px;
+	& + iframe {
+		height: 250px;
+		width: 300px;
+	}
 }
 
 
@@ -344,8 +348,9 @@ iframe {
 			}
 		}
 		& + .commissions-each {
-			margin-top:40px;
-			padding-top:40px;
+			margin-top:20px;
+			padding-top:20px;
+			border-top:1px solid #66C3B0;
 		}
 	}
 }

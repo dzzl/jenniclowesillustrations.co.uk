@@ -2132,6 +2132,10 @@ iframe {
   max-width: 755px;
   height: 780px;
 }
+iframe + iframe {
+  height: 250px;
+  width: 300px;
+}
 .commissions-wrap .commissions-each {
   line-height: 1.6;
   font-size: 14px;
@@ -2178,8 +2182,9 @@ iframe {
   }
 }
 .commissions-wrap .commissions-each + .commissions-each {
-  margin-top: 40px;
-  padding-top: 40px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #66C3B0;
 }
 .image {
   display: block;
