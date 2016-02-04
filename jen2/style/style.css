@@ -2132,7 +2132,7 @@ iframe {
   max-width: 755px;
   height: 780px;
 }
-iframe + iframe {
+iframe ~ iframe {
   height: 250px;
   width: 300px;
 }
