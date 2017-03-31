@@ -1,88 +1,140 @@
-﻿﻿<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="ie6" xmlns="http://www.w3.org/1999/xhtml"> <![endif]-->
-<!--[if IE 7]>         <html class="ie7" xmlns="http://www.w3.org/1999/xhtml"> <![endif]-->
-<!--[if IE 8]>         <html class="ie8" xmlns="http://www.w3.org/1999/xhtml"> <![endif]-->
-<!--[if gt IE 8]><!--> <html xmlns="http://www.w3.org/1999/xhtml">         <!--<![endif]-->
-
+﻿<!doctype html>
+<html class="no-js" lang="">
 <head>
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta http-equiv="Content-Language" content="en-gb" />
-    <link type="text/css" media="screen" rel="stylesheet" href="style/style.css" />
-    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Jenni Clowes Illustrations</title>
+	<meta name="description" content="Coffee and Confusion and Commissions. Illustrations from the North of England.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="favicon.png">
+
+	<link rel="stylesheet" href="style/style.css">
+	
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<!--script src="javascript/jquery-1.10.1.min.js"></script-->
+	
 	<script src="javascript/jquery.colorbox-min.js"></script>
 	<link rel="stylesheet" href="style/colorbox.css" />
+	
 	<script src="javascript/jflickrfeed.min.js"></script>
+	
+	<link href='//fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+
+	<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+	<![endif]-->
 </head>
 <body>
 
-<div id="container">
-<div id="wrapper">
+<header>
 
-	<div id="header" class="cf">
-		<div class="sidebar">
-			<a href="#" class="logo-blink ir link-gallery">Jenni Clowes Illustrations</a>
-		</div>
-		<div class="content">
-			<h1 class="logo-text ir link-gallery">Jenni Clowes Illustrations</h1>
-		</div>
-	</div>
-
-
-
-	<div id="content-main" class="cf">
+	<div class="container">
 	
-		<div class="sidebar">
-			<ul id="nav-side">
-				<li class="tumblr"><a href="http://jenniclowesillustrations.tumblr.com">My Tumblr galleries</a></li>
-				<li class="shop"><a href="http://www.etsy.com/uk/shop/JCaccidental?ref=si_shop">Buy my stuff!</a></li>
-				<li class="commissions"><a class="link-commissions" href="#">My commissions!</a></li>
-				<li class="facebook"><a href="https://www.facebook.com/pages/Jenni-Clowes-Illustrations/257323639646">My Facebook page</a></li>
-				<li class="info"><a class="link-about" href="#">About meee!</a></li>
-			</ul>
+		<span class="logo-wrap" data-target="home"><img class="logo-main" src="images/site-title.png" /></span>
+		
+		<nav class="nav-main">
+			<span class="nav-link" data-target="gallery">gallery</span>
+			<span class="nav-link" data-target="about">about</span>
+			<!--span class="nav-link" data-target="contact">contact</span-->
+			<a class="nav-link full" href="https://www.etsy.com/uk/shop/JCaccidental">shop</a>
+			<span class="nav-link iframe" data-target="shop">shop</span>
+			<span class="nav-link" data-target="testimonials">testimonials</span>
+		</nav>
+		
+	</div>
+	
+	<span class="mob-detect"></span>
+	
+</header>
+
+<main>
+
+	<div class="container">
+		
+	
+		<div class="tab-content active" data-name="home">
+			<div class="home-image"><img class="image" src="images/website-image-flick-1.png" onmouseover="this.src='images/website-image-flick-2.png';" onmouseout="this.src='images/website-image-flick-1.png';"></div>
 		</div>
 		
 		
-		<div id="tab-gallery" class="content">
-			<!--h2>A gallery.</h2-->
-			<ul id="cbox" class="gallery cf"></ul>
+		<div class="tab-content" data-name="gallery">
+			<ul id="cbox-gallery" class="gallery"></ul>
 		</div>
 		
-		<div id="tab-about" class="content">
-			<p>Graduate of Graphic design and Illustration at De Montfort University, Leicester. Currently based in Leeds.</p>
-			<p>Available for commissions such as; Concept, Design and Print of Invitations. Custom Portraits and Greetings cards. Anything you need (almost!)</p>
-			<p>Also happy to discuss collaborations; Big or Small.</p>
+		
+		<div class="tab-content" data-name="about">
+			<div class="about-text">
+
+<div class="about-image"><img class="image" src="images/bombay-sapphire.png"></div>
+<div class="about-text">
+<p>Hello! Thanks for clicking your way here.</p>
+<p>I’m an Illustrator based in the North West of England.</p>
+<p>I graduated in 2009 with a degree in Graphic Design and Illustration at De Montfort University, Leicester.</p>
+<p>Since graduating i’ve returned to the North where I can often be found drinking coffee and drawing. I also enjoy cooking, yoga and staring at trees.</p>
+<p>My work is hand drawn, often using coloured pencils or watercolors and I like to render using my Mac.</p>
+<p>I work closely with on projects such as Wedding Stationery, Family Portraits and Small Business logos. You can read some of my client’s testimonials <span class="text-link" data-target="testimonials">here</span>.</p>
+<p>If you’d like to say hello you can email me -  <a class="text-link" href="mailto:jenni.clowes@gmail.com">jenni.clowes@gmail.com</a> i’d love to hear from you!</p>
+</div>
+
+			</div>
+		</div>
+		
+		
+		<!--div class="tab-content" data-name="contact">
+			<img class="image" src="images/mug.png">
 			<p>You can get in touch here:</p>
 			<p>07814 984937</p>
 			<p><a href="mailto:jenni.clowes@gmail.com">jenni.clowes@gmail.com</a></p>
-			<img class="about-img" src="images/about-me.png">
+		</div-->
+		
+		
+		<div class="tab-content" data-name="shop">
+			<script type='text/javascript' src='//www.etsy.com/assets/js/etsy_mini_shop.js'></script>
+			<script type='text/javascript'>new Etsy.Mini(8545212,'gallery',4,5,0,'https://www.etsy.com');</script>
+			<script type="text/javascript"><!--
+				s6_user = "jenniclowes";
+				s6_format = "300x250";
+			//--></script>
+			<script type="text/javascript" src="//society6.com/js/show_banner.js"></script>
 		</div>
 		
-		<div id="tab-commissions" class="content">
-			<ul id="cbox-commissions" class="gallery cf"></ul>
+		
+		<div class="tab-content" data-name="testimonials">
+			<div id="cbox-commissions" class="commissions-wrap">
+			</div>
 		</div>
+		
 		
 	</div>
 
+</main>
 
-	<div id="footer">
+<footer>
+
+	<div class="container">
+	
+		<div class="social-wrap">
+			<a class="social-icon twitter" href="https://twitter.com/JenniClowes"><span class="alt-text">Twitter</span></a>
+			<a class="social-icon facebook" href="https://www.facebook.com/pages/Jenni-Clowes-Illustrations/257323639646"><span class="alt-text">Facebook</span></a>
+			<a class="social-icon linkedin" href="https://www.linkedin.com/pub/jenni-clowes/7b/3bb/684"><span class="alt-text">Linked In</span></a>
+			<a class="social-icon instagram" href="https://instagram.com/jcillu/"><span class="alt-text">Instagram</span></a>
+		</div>
+	
+		<div class="copyright"><p>All content &copy; Jenni Clowes 2017</p><p>No reproduction without express permission</p></div>
+	
 	</div>
-
-</div>
-</div>
+	
+</footer>
 
 
 
 <script>
 $(document).ready(function(){
 
-	$('#cbox').jflickrfeed({
+
+	$('#cbox-gallery').jflickrfeed({
 		limit: 20,
 		qstrings:{
 			set: '72157634328408060',
@@ -90,27 +142,27 @@ $(document).ready(function(){
 		},
 		itemTemplate: '<li>'+
 						'<a rel="colorbox" href="{{image}}" title="{{title}}">' +
-							'<img src="{{image_s}}" alt="{{title}}" />' +
+							'<img src="{{image_m}}" alt="{{title}}" />' +
 						'</a>' +
 					  '</li>'
 	}, function(data) {
-		$('#cbox a').colorbox();
+		$('#cbox-gallery a').colorbox();
 	});
 	
-	$('#cbox').jflickrfeed({
-		limit: 1,
-		qstrings:{
-			set: '72157634323367587',
-			nsid: '50198685@N07'
-		},
-		itemTemplate: '<li>'+
-						'<a rel="colorbox" href="{{image}}" title="{{title}}">' +
-							'<img src="{{image_s}}" alt="{{title}}" />' +
-						'</a>' +
-					  '</li>'
-	}, function(data) {
-		$('#cbox a').colorbox();
-	});
+	//$('#cbox-gallery').jflickrfeed({
+	//	limit: 1,
+	//	qstrings:{
+	//		set: '72157634323367587',
+	//		nsid: '50198685@N07'
+	//	},
+	//	itemTemplate: '<li>'+
+	//					'<a rel="colorbox" href="{{image}}" title="{{title}}">' +
+	//						'<img src="{{image_m}}" alt="{{title}}" />' +
+	//					'</a>' +
+	//				  '</li>'
+	//}, function(data) {
+	//	$('#cbox-gallery a').colorbox();
+	//});
 	
 	$('#cbox-commissions').jflickrfeed({
 		limit: 20,
@@ -118,39 +170,82 @@ $(document).ready(function(){
 			set: '72157634991599884',
 			nsid: '50198685@N07'
 		},
-		itemTemplate: '<li>'+
-						'<a rel="colorbox" href="{{image}}" title="{{title}}">' +
-							'<img src="{{image_s}}" alt="{{title}}" />' +
-						'</a>' +
-					  '</li>'
+		itemTemplate: '<div class="commissions-each">'+
+							'<a class="image" rel="colorbox" href="{{image}}"><img src="{{image_m}}" alt="{{title}}" /></a>'+
+							'<div class="desc">'+
+								'<blockquote>{{description}}</blockquote>'+
+								'<p class="client">{{title}}</p>'+
+							'</div>'+
+						'</div>'
 	}, function(data) {
 		$('#cbox-commissions a').colorbox();
 	});
+	
+	
+	
+	//activate modal popups
+	$('[rel="colorbox"]').colorbox();
+	
+	
+	//$("iframe").contents().find("#listing-container").css('width','auto');
+	
+	
+	var getHash = window.location.hash;
+	if(getHash) {
+	
+		getHash = window.location.hash.substring(1);
+
+		$('[data-target].active').removeClass('active');
+		$('[data-target=' + getHash + ']').addClass('active');
 		
+		$('[data-name].active').removeClass('active');
+		$('[data-name=' + getHash + ']').addClass('active');
+	
+	} else {
+
+		//do nothing
+	
+	}
+	
+	//tabs
+	$('[data-target]').click(function(){
+	
+		var that = $(this);
+		var target = that.data('target');
 		
-	$('.link-gallery').click(function(){
-		$('#tab-about').hide();
-		$('#tab-gallery').show();
-		$('#tab-commissions').hide();
-		return false;
-	})
-	$('.link-about').click(function(){
-		$('#tab-about').show();
-		$('#tab-gallery').hide();
-		$('#tab-commissions').hide();
-		return false;
-	})
-	$('.link-commissions').click(function(){
-		$('#tab-about').hide();
-		$('#tab-gallery').hide();
-		$('#tab-commissions').show();
-		return false;
-	})
+		$('[data-target].active').removeClass('active');
+		$(that).addClass('active');
+		
+		$('[data-name].active').removeClass('active');
+		$('[data-name=' + target + ']').addClass('active');
+		
+		window.location = ('#' + target);
+		
+	});
+	
 		
 });
 
 
+//do something 500ms after a page resize:
+$(window).resize(function() {
+	if(this.resizeTO) clearTimeout(this.resizeTO);
+	this.resizeTO = setTimeout(function() {
+		$(this).trigger('resizeEnd');
+	}, 500);
+});
+//the something:
+$(window).bind('resizeEnd', function() {
+    
+});
 
+
+
+
+
+
+
+//ganalytics, yo
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-16562749-1']);
 _gaq.push(['_trackPageview']);
