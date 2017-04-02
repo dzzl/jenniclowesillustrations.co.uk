@@ -2044,9 +2044,9 @@ body:after {
 body main {
   padding-left: 20px;
   padding-right: 20px;
-  -webkit-box-flex: 1 1 auto;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
+  -webkit-box-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
   flex: 1 1 auto;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2061,6 +2061,19 @@ body main {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+  justify-content: space-around;
+}
+body header {
+  -webkit-box-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+body footer {
+  -webkit-box-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 .tab-content {
   height: 0;
@@ -2194,10 +2207,22 @@ iframe ~ iframe {
 }
 @media (min-width: 768px) {
   .about-text .about-image {
-    margin-bottom: 0;
     margin-right: 20px;
     float: left;
   }
+}
+.about-text .about-text {
+  overflow: hidden;
+}
+.text-link {
+  color: #66C3B0;
+  transition: all 0.15s;
+  text-decoration: none;
+  cursor: pointer;
+}
+.text-link:hover {
+  color: #7FDBC9;
+  text-decoration: underline;
 }
 footer {
   padding: 20px;
